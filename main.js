@@ -2,37 +2,37 @@ const perguntas = [
     {
     enunciado: "QUAL O SEU ESPORTE PREFIRIDO?",
     alternativas: [
-    "MOUNTAIN BIKE",
-    "SKATE"
+    "texto:MOUNTAIN BIKE, pontuacao: 1 },
+    "texto:SKATE,pontuacao: 2 }
     ]
     },
     {
     enunciado: "VOCÊ PREFERE PRATICAR ESPORTES AO AR LIVRE OU EM AMBIENTES FECHADOS?",
     alternativas: [
-    "AO AR LIVRE",
-    "EM AMBIENTES FECHADOS"
+     {texto:AO AR LIVRE,pontuacao: 1},
+    {texto:EM AMBIENTES FECHADOS,pontuacao: 2 }
     ]
     },
     {
     enunciado: "QUAL DOS SEGUINTES ESTILOS VOCÊ PREFERE PARA SE EXERCITAR?",
     alternativas: [
-    "PARKOUR",
-    "ESPORTES DE AÇÃO"
+    {texto:PARKOUR,pontuacao: 1 },
+   { texto:ESPORTES DE AÇÃO,pontuacao: 2 }
     ]
     },
     {
     enunciado: "VOCÊ COSTUMA PRATICAR ESPORTES SOZINHO OU EM GRUPO?",
     alternativas: [
-    "SOZINHO",
-    "EM GRUPO"
+    "texto:SOZINHO,pontuacao: 1 },
+    "texto:EM GRUPO,pontuacao: 2 }
     ]
     
     },
     {
     enunciado: "QUAL É O FATOR MAIS IMPORTANTE PARA VOCE AO ESCOLHER UM ESPORTE?",
     alternativas: [
-    "DESAFIO FÍSICO E ADRENALINA",
-    "SOCIALIZAÇÃO E DIVERSÃO"
+    {texto:DESAFIO FÍSICO E ADRENALINA,pontuacao: 1 },
+    {texto:SOCIALIZAÇÃO E DIVERSÃO,pontuacao: 2 }
     ]
     }
     ];
@@ -60,3 +60,17 @@ const perguntas = [
     });
     }
     mostraPergunta();
+button.addEventListener('click', () => {
+pontuacao += alternativa.pontuacao; // Adiciona a pontuação da alternativa
+selecionada
+atual++;
+if (atual < perguntas.length) {
+mostraPergunta();
+} else {
+function exibePontuacaoFinal() {
+caixaPerguntas.textContent = `Você completou o questionário! Sua pontuação
+final é: ${pontuacao}`;
+alternativasContainer.innerHTML = ''; // Limpa as alternativas
+}
+});
+
