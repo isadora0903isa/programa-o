@@ -1,27 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redes Sociais</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meus Doramas Favoritos</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #90EE90;
+margin: 0;
+padding: 20px;
+}
+h1 {
+text-align: center;
+color: #323;
+}
+ul {
+list-style: none;
+padding: 0;
+}
+li {
+background-color: #fff;
+margin: 10px 0;
+padding: 10px;
+border: 1px solid #ddd;
+border-radius: 5px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+</style>
 </head>
 <body>
-    <header>
-        <h1>Relatório das redes sociais</h1>
-        <nav>
-            <a href="index.html">Mundo</a>
-            <a href="#">Minha escola</a>
-        </nav>
-    </header>
-    <main class="graficos-section">
-        <section id="graficos-container" class="graficos-container">
-            <!-- crie os gráficos/texto aqui -->
-        </section>
-    </main>
-    <footer>
-        <p>Desenvolvido por Isa Ribeiro</p>
-    </footer>
-    <script type="module" src="graficos/informacoesGlobais.js"></script>
+<h1 id="titulo">Carregando...</h1>
+<ul id="lista"></ul>
+
+<script>
+// JSON embutido na página
+const dados = {
+"titulo": "Meus Doramas Favoritos",
+"filmes": [
+{"nome": "Doom At Your Service", "genero": "Fantasia"},
+{"nome": "A Criatura de Gyeongseong", "genero": "Ficção Científica"},
+{"nome": "My Name", "genero": "Ação e Suspense"}
+]
+};
+
+// Exibir o título
+document.getElementById('titulo').textContent = dados.titulo;
+
+// Exibir a lista de doramas
+const lista = document.getElementById('lista');
+dados.filmes.forEach(filme => {
+const item = document.createElement('li');
+item.textContent = `${dorama.nome} - Gênero: ${dorama.genero}`;
+lista.appendChild(item);
+});
+</script>
 </body>
 </html>
